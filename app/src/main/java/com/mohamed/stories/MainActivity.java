@@ -27,7 +27,15 @@ public class MainActivity extends AppCompatActivity {
         java.util.ArrayList listTitle = db.get_All_Titles();
         android.widget.ArrayAdapter arrayAdapter = new android.widget.ArrayAdapter(this, com.mohamed.stories.R.layout.my_list_story, com.mohamed.stories.R.id.txtTitel, listTitle);
         listView.setAdapter(arrayAdapter);
-
+        listView.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(android.widget.AdapterView<?> parent, android.view.View view, int position, long id) {
+                String title = String.valueOf(parent.getItemAtPosition(position));
+                android.content.Intent intent = new android.content.Intent(MainActivity.this, Stotry.class);
+                intent.putExtra("TITLE", title);
+                startActivity(intent);
+            }
+        });
 
     }
 

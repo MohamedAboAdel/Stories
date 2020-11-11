@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ui.Stories"></activity>
+        <activity android:name=".Stotry"></activity>
+        <activity android:name=".Ui.Stories" />
         <activity
             android:name=".MainActivity"
             tools:ignore="Instantiatable">
